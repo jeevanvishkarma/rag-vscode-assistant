@@ -1,10 +1,18 @@
 import requests, time,json,os
 import dotenv
 dotenv.load_dotenv()
+import streamlit as st
+
+def get_secret(key):
+    value = os.getenv(key)
+    if not value:
+        st.error(f"Error: {key} not found in environment variables.")
+        st.stop()
+    return value
 
 
 
-TOKEN = os.getenv("git_token")
+TOKEN = get_secret("git_token")
 
 
 OWNER = "microsoft"

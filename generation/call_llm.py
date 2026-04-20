@@ -1,9 +1,18 @@
+from turtle import st
+
 from openai import OpenAI
 import dotenv
 import os
 dotenv.load_dotenv()
+import streamlit as st
+def get_secret(key):
+    value = os.getenv(key)
+    if not value:
+        st.error(f"Error: {key} not found in environment variables.")
+        st.stop()
+    return value
 
-client = OpenAI(api_key=os.getenv("gpt_api_key"))
+client = OpenAI(api_key=get_secret("gpt_api_key"))
 
 def call_llm(prompt,max_tokens = 50):
     response = client.chat.completions.create(
