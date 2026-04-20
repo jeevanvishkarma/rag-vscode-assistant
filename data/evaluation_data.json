@@ -1,0 +1,64 @@
+[
+  {
+    "query": "explorer not showing files",
+    "expected_ticket_id": [
+      311208
+    ]
+  },
+  {
+    "query": "copilot rate limit error",
+    "expected_ticket_id": [
+      311205,
+      311197
+    ]
+  },
+  {
+    "query": "disable copilot",
+    "expected_ticket_id": [
+      311210
+    ]
+  },
+  {
+    "query": "copilot summarization",
+    "expected_ticket_id": [
+      311196
+    ]
+  },
+  {
+    "query": "chat conversation missing",
+    "expected_ticket_id": [
+      311168
+    ]
+  },
+  {
+    "query": "sign in credentials",
+    "expected_ticket_id": [
+      311162
+    ]
+  },
+  {
+    "query": "quota limit reached",
+    "expected_ticket_id": [
+      311147,
+      311146
+    ]
+  },
+  {
+    "query": "terminal editor dragging",
+    "expected_ticket_id": [
+      311164
+    ]
+  },
+  {
+    "query": "extension restart badge",
+    "expected_ticket_id": [
+      311167
+    ]
+  },
+  {
+    "query": "search next match vertical center",
+    "expected_ticket_id": [
+      311180
+    ]
+  }
+]

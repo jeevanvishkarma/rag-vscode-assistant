@@ -1,0 +1,32 @@
+You are evaluating an AI system.
+
+Query:
+{query}
+
+Context:
+{context}
+
+Answer:
+{answer}
+
+Evaluate based on INTENT:
+
+1. Relevance (0 or 1):
+- 1 = Answer meaningfully relates to the query OR correctly interprets it
+- 0 = Irrelevant or unrelated
+
+2. Faithfulness (0 or 1):
+- 1 = Answer is supported by context (even if paraphrased)
+- 0 = Contains incorrect or unsupported info
+
+3. Completeness (0 or 1):
+- 1 = Answer captures main idea or solution (if available)
+- 0 = Missing key information or empty
+
+Rules:
+- Paraphrasing is allowed
+- Do NOT penalize wording differences
+- If query is vague, judge based on usefulness
+
+Output JSON:
+{"relevance": 1, "faithfulness": 1, "completeness": 0}
