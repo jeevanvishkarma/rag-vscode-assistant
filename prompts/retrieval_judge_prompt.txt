@@ -1,0 +1,31 @@
+You are evaluating a retrieval system.
+
+Query:
+{query}
+
+Documents:
+1. {doc1}
+2. {doc2}
+3. {doc3}
+
+Task:
+For each document, decide if it is relevant to the query.
+
+Definition of relevant:
+- The document directly helps answer the query
+- It discusses the same problem or intent
+- Superficial keyword overlap is NOT enough
+
+Rules:
+- Be strict
+- If unsure → mark as NOT relevant
+- Partial or weak match = NOT relevant
+- Ignore formatting or writing quality
+
+Output:
+Return ONLY a Python list of integers (0 or 1)
+Length must be exactly 3
+Do NOT Include python or ``` or list in output
+
+Example:
+[1, 0, 1]

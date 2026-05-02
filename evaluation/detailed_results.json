@@ -1,0 +1,579 @@
+[
+  {
+    "query": "request RateLimited by an incompetent AI",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Test: Reasoning in Copilot CLI",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Copilot Chat mixes contexts from different sessions",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "GitHub Copilot Chat",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "POR VAOFR NO ESTORBES",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Integrated terminal: VS Code injects installation root into process PATH, code CLI resolves to Code.exe instead of code.cmd",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Copilot Pro+ \u2013 Weekly Rate Limit Not Resetting After Expected Reset (Copilot)",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Copilot Chat shows \"Language model unavailable\"",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "No carga",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "ERROR: Protected fields have been made PUBLIC.",
+    "llm_relevance": [
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "language mdoel unavalibe erro wont go away tried everything and i have pro subscription",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "AgentHost: Reduce duplication between the local/remoteAgentHostSessionsProvider",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "OutputMonitor.continueMonitoringAsync does not cancel the previous monitoring run before starting a new one",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Focus not visible on install buttons for extensions page",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "typing errored in terminal are slow and freeze",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "New language: Dromi",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Can't get back to the list in Agent Customizations by clicking list entry",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "[Unhandled Error] Cannot read properties of undefined (reading 'entries')",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Week limit make your Update useless",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Long question is truncated",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "Error when typing to chat.",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "language model unavaible ",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "OS toast notification shows wrong terminal command when multiple tool invocations in response",
+    "llm_relevance": [
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "add `focus terminal` option to `ask_questions` tool when invoked from terminal tool",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "VS CODE HISTORY ISSUE",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "copilot pro plus request rate limited error",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "why does copilot pro keep hitting rate limits",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "context mixing in copilot chat sessions",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "how to fix copilot chat context issue",
+    "llm_relevance": [
+      0,
+      1,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 0.5
+  },
+  {
+    "query": "copilot chat looking for wrong documentation",
+    "llm_relevance": [
+      0,
+      1,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 0.5
+  },
+  {
+    "query": "why is copilot searching the wrong file",
+    "llm_relevance": [
+      0,
+      0,
+      0
+    ],
+    "precision": 0.0,
+    "recall": 0,
+    "mrr": 0
+  },
+  {
+    "query": "codo cli points to wrong app location",
+    "llm_relevance": [
+      0,
+      0,
+      0
+    ],
+    "precision": 0.0,
+    "recall": 0,
+    "mrr": 0
+  },
+  {
+    "query": "VS Code terminal PATH causing issues",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "copilot rate limit not resetting correctly",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "when will my copilot rate limit reset",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "language model unavailable error in copilot",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "what to do if copilot shows model error",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "infinite loading issue with the extension",
+    "llm_relevance": [
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "why is my extension stuck loading forever",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "protected fields showing as public error",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "what causes public fields error in VS Code",
+    "llm_relevance": [
+      0,
+      0,
+      0
+    ],
+    "precision": 0.0,
+    "recall": 0,
+    "mrr": 0
+  },
+  {
+    "query": "typing errors in terminal causing freezes",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "terminal is slow and shows typing errors",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "how to handle truncated long questions",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "fix for long questions being cut off",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "language model unavailable error after command",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "copilot shows error when giving command",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "OS notification for terminal commands is wrong",
+    "llm_relevance": [
+      1,
+      0,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "why does OS show incorrect terminal commands",
+    "llm_relevance": [
+      0,
+      1,
+      0
+    ],
+    "precision": 0.333,
+    "recall": 1,
+    "mrr": 0.5
+  },
+  {
+    "query": "focus terminal option needed for tool",
+    "llm_relevance": [
+      1,
+      1,
+      0
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "how to add focus terminal to ask questions",
+    "llm_relevance": [
+      1,
+      0,
+      1
+    ],
+    "precision": 0.667,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "VS Code history issues troubleshooting guide",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  },
+  {
+    "query": "how to fix history issues in VS Code",
+    "llm_relevance": [
+      1,
+      1,
+      1
+    ],
+    "precision": 1.0,
+    "recall": 1,
+    "mrr": 1.0
+  }
+]
