@@ -113,36 +113,38 @@ Answer
 ```text
 rag-vscode-assistant/
 │
-├── app.py
+├── app.py                         # Streamlit application
+├── requirements.txt
+├── README.md
 │
 ├── retrieval/
-│   ├── retriever.py
-│   ├── bm25_retriever.py
-│   ├── reranker.py
-│   └── query_rewriter.py
+│   ├── retriever.py              # FAISS semantic retrieval
+│   ├── bm25_retriever.py         # BM25 lexical reranking
+│   ├── reranker.py               # Cross-encoder reranker
+│   └── query_rewriter.py         # History-aware query rewriting
 │
 ├── generation/
-│   └── generate_answer.py
-│
-├── ingestion/
-│   ├── create_chunks.py
-│   ├── create_embeddings.py
-│   └── build_bm25.py
+│   └── generate_answer.py        # GPT answer generation
 │
 ├── scripts/
-│   └── run_rag.py
+│   └── run_rag.py                # Main RAG orchestration pipeline
+│
+├── ingestion/
+│   ├── create_chunks_all.py      # Semantic chunk creation
+│   ├── create_embeddings.py      # FAISS embedding generation
+│   └── build_bm25.py             # BM25 index creation
 │
 ├── files/
 │   └── index_folder/
-│       ├── faiss.index
-│       └── metadata.jsonl
+│       ├── faiss.index           # FAISS vector index
+│       └── metadata.jsonl        # Chunk metadata
 │
 ├── data/
-│   └── bm25.pkl
+│   └── bm25.pkl                  # Serialized BM25 index
 │
-├── requirements.txt
-│
-└── README.md
+└── evaluation/
+    ├── retrieval_eval.py
+    └── generation_eval.py
 ```
 
 ---
@@ -174,12 +176,75 @@ Includes:
 
 ---
 
+## 🚀 Running the Project
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/jeevanvishkarma/rag-vscode-assistant.git
+cd rag-vscode-assistant
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Add Environment Variables
+
+Create:
+
+```text
+.env
+```
+
+Add:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+---
+
+### 4️⃣ Run Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 💡 Example Queries
+
+```text
+VS Code Python interpreter not detected after update
+```
+
+```text
+Copilot is really slow in VS Code
+```
+
+```text
+VS Code crashes on macOS when opening terminal
+```
+
+```text
+Python environment keeps changing
+```
+
+---
+
 ## 🔮 Future Improvements
 
 - Neighbor chunk expansion
 - Elasticsearch/OpenSearch integration
-- Multi-query retrieval
 - Streaming responses
+- Multi-query retrieval
 - Citation support
 - Agentic retrieval workflows
 
