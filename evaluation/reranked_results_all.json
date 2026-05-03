@@ -1,0 +1,6 @@
+{
+  "precision_at_k": 0.679,
+  "recall_at_k": 0.962,
+  "mrr": 0.94,
+  "avg_relevant_docs": 2.019
+}
