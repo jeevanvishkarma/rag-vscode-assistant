@@ -1,46 +1,33 @@
 🤖 VS Code Issues RAG Assistant
 
-Semantic + Hybrid Retrieval over GitHub VS Code Issues using FAISS, BM25, Cross-Encoder Reranking, and GPT-4o-mini.
+A production-style Retrieval-Augmented Generation (RAG) system built to analyze and answer queries based on VS Code GitHub issues and Copilot-related discussions.
 
 ⸻
 
-🚀 Demo
+🚀 Live Demo
 
-Add your demo GIF / screenshots here
-
-/demo/demo.gif
+👉 VS Code Issues RAG Assistant Demo￼
 
 ⸻
 
-📌 Overview
+🧠 Overview
 
-This project is a production-style Retrieval-Augmented Generation (RAG) system built on top of GitHub VS Code Issues.
+This system enables users to:
 
-The assistant can:
-
-* Perform semantic search over GitHub issues
-* Retrieve relevant issues using FAISS vector search
-* Improve exact keyword matching using BM25
-* Rerank results using a Cross-Encoder reranker
-* Generate contextual answers using GPT-4o-mini
-* Support conversational history-aware retrieval
-* Display retrieval latency and retrieved context
-
-The project focuses heavily on:
-
-* Retrieval quality
-* Low latency
-* Hybrid search architecture
-* Real-world scalability
-* Semantic chunking
+* Ask natural language questions about VS Code issues
+* Get context-aware, grounded answers
+* Handle follow-up queries using conversation memory
+* Retrieve both semantic and exact keyword matches using hybrid retrieval
 
 ⸻
 
-🧠 Architecture
+⚙️ Architecture
 
 User Query
     ↓
-Dense Retrieval (FAISS IVF)
+Query Rewriting (history-aware)
+    ↓
+Dense Retrieval (FAISS + MiniLM)
     ↓
 Top 100 Semantic Candidates
     ↓
@@ -50,100 +37,77 @@ Top 20 Candidates
     ↓
 Cross-Encoder Reranking
     ↓
-Top 5 Final Context Chunks
+Top 5 Final Chunks
     ↓
-GPT-4o-mini
+LLM Generation (GPT-4o-mini)
     ↓
-Generated Answer
+Answer
+
+⸻
+
+📊 Evaluation
+
+🔍 Retrieval Performance
+
+Metric	Score
+Recall@K	0.96
+Precision@K	0.68
+MRR	0.94
+Avg Relevant Docs	2.01
+
+⸻
+
+🧠 Generation Quality (LLM-as-Judge)
+
+Metric	Score
+Relevance	0.98
+Faithfulness	0.98
+Completeness	0.94
 
 ⸻
 
 ✨ Features
 
-🔎 Hybrid Retrieval
-
-Combines:
-
-* Dense semantic retrieval using Sentence Transformers + FAISS
-* Lexical retrieval refinement using BM25
-
-This improves:
-
-* Exact technical term matching
-* Version-specific retrieval
-* Error/log retrieval
-* Semantic understanding
+* ✅ Hybrid Retrieval (FAISS + BM25)
+* ✅ Semantic search over VS Code GitHub issues
+* ✅ Query rewriting using LLM (history-aware)
+* ✅ FAISS IVF vector database with SentenceTransformers
+* ✅ BM25 lexical reranking for exact keyword matching
+* ✅ Cross-Encoder reranking for improved precision
+* ✅ Grounded answer generation (low hallucination)
+* ✅ Multi-turn conversational memory
+* ✅ Context viewer for transparency
+* ✅ Latency tracking for each pipeline stage
+* ✅ Full evaluation pipeline (retrieval + generation)
 
 ⸻
 
-⚡ Fast Retrieval
+⚡ Latency
 
-Uses:
-
-* FAISS IVF Index
-* Approximate Nearest Neighbor Search
-* Cross-Encoder reranking only on narrowed candidates
-
-Optimized for:
-
-* Large-scale datasets
-* Low latency retrieval
-* GPU-efficient embeddings
+Stage	Avg Latency
+Dense Retrieval	~0.4 sec
+BM25 Reranking	~0.03 sec
+Cross-Encoder Reranking	~0.8 sec
+Generation	~1.4 sec
+Total	~2.7 sec
 
 ⸻
 
-🧩 Semantic Chunking
+🖥️ Demo UI
 
-Custom semantic chunking pipeline:
-
-* Preserves issue structure
-* Maintains title + description context
-* Stores metadata separately
-* Optimized for retrieval quality
-
-⸻
-
-🧠 Conversational Retrieval
-
-Supports:
-
-* Multi-turn chat history
-* Query rewriting
-* Context-aware retrieval
-
-⸻
-
-📊 Latency Tracking
-
-The UI displays:
-
-* Dense retrieval latency
-* BM25 latency
-* Cross-encoder reranking latency
-* Generation latency
-* Total pipeline latency
-
-⸻
-
-🛠️ Tech Stack
-
-Component	Technology
-Embeddings	Sentence Transformers
-Vector DB	FAISS IVF
-Lexical Search	BM25
-Reranker	Cross-Encoder
-LLM	GPT-4o-mini
-UI	Streamlit
-Backend	Python
-Dataset	GitHub VS Code Issues
+* Chat-based interface (Streamlit)
+* Hybrid retrieval visualization
+* Expandable retrieved context viewer
+* Retrieval latency metrics
+* Conversation memory support
 
 ⸻
 
 📂 Project Structure
 
-project/
+rag-vscode-assistant/
 │
-├── app.py
+├── app.py                     # Streamlit UI
 │
 ├── retrieval/
 │   ├── retriever.py
@@ -154,13 +118,13 @@ project/
 ├── generation/
 │   └── generate_answer.py
 │
-├── scripts/
-│   └── run_rag.py
-│
 ├── ingestion/
 │   ├── create_chunks.py
 │   ├── create_embeddings.py
 │   └── build_bm25.py
+│
+├── scripts/
+│   └── run_rag.py
 │
 ├── files/
 │   └── index_folder/
@@ -170,203 +134,45 @@ project/
 ├── data/
 │   └── bm25.pkl
 │
-├── demo/
-│   └── demo.gif
-│
 ├── requirements.txt
 │
 └── README.md
 
 ⸻
 
-📦 Dataset
+🧩 Dataset
 
-The system is built on top of GitHub VS Code Issues.
-
-Dataset characteristics:
-
-* ~250K GitHub issues
-* ~800K semantic chunks
+* ~250K GitHub VS Code Issues
+* ~800K Semantic Chunks
 * Includes:
-    * Titles
+    * Issue titles
     * Descriptions
     * Comments
     * Metadata
 
 ⸻
 
-🧪 Retrieval Pipeline
-
-1️⃣ Dense Retrieval
-
-Uses:
-
-* SentenceTransformer embeddings
-* FAISS IVF index
-
-Purpose:
-
-* Broad semantic recall
-* Fast approximate nearest-neighbor retrieval
-
-Retrieves:
-
-Top 100 semantic candidates
-
-⸻
-
-2️⃣ BM25 Lexical Reranking
-
-Purpose:
-
-* Improve exact keyword matching
-* Better handling of:
-    * Version numbers
-    * Error messages
-    * Package names
-    * APIs
-    * Stack traces
-
-BM25 reranks only the FAISS candidates.
-
-This avoids expensive full-corpus lexical search.
-
-Produces:
-
-Top 20 lexical candidates
-
-⸻
-
-3️⃣ Cross-Encoder Reranking
-
-Uses a transformer reranker to:
-
-* Improve precision
-* Remove semantic noise
-* Rank final candidates more accurately
-
-Produces:
-
-Top 5 final chunks
-
-⸻
-
-4️⃣ Answer Generation
-
-The final chunks are passed to GPT-4o-mini for answer generation.
-
-⸻
-
-📈 Retrieval Metrics
-
-Example evaluation metrics:
-
-{
-  "precision_at_k": 0.679,
-  "recall_at_k": 0.962,
-  "mrr": 0.94
-}
-
-⸻
-
-⚙️ Installation
-
-1️⃣ Clone Repository
-
-git clone <your_repo_url>
-cd <repo_name>
-
-⸻
-
-2️⃣ Create Virtual Environment
-
-python -m venv venv
-
-Activate:
-
-Windows
-
-venv\Scripts\activate
-
-macOS/Linux
-
-source venv/bin/activate
-
-⸻
-
-3️⃣ Install Requirements
-
-pip install -r requirements.txt
-
-⸻
-
-🔑 Environment Variables
-
-Create:
-
-.env
-
-Add:
-
-OPENAI_API_KEY=your_api_key_here
-
-⸻
-
-🚀 Running the App
-
-streamlit run app.py
-
-⸻
-
-🧱 Building the Pipeline
-
-1️⃣ Create Semantic Chunks
-
-python ingestion/create_chunks.py
-
-⸻
-
-2️⃣ Create FAISS Embeddings
-
-python ingestion/create_embeddings.py
-
-⸻
-
-3️⃣ Build BM25 Index
-
-python ingestion/build_bm25.py
-
-⸻
-
-💻 Example Queries
-
-VS Code Python interpreter not detected after update
-Explorer not showing files after opening workspace
-Copilot is really slow in VS Code
-VS Code crashes on macOS when opening terminal
-Python environment keeps changing
+🛠️ Tech Stack
+
+Component	Technology
+Embeddings	SentenceTransformers
+Vector Search	FAISS IVF
+Lexical Search	BM25
+Reranking	Cross-Encoder
+LLM	GPT-4o-mini
+UI	Streamlit
+Backend	Python
 
 ⸻
 
 🔮 Future Improvements
 
-Potential future enhancements:
-
 * Neighbor chunk expansion
-* Parent-child retrieval
-* Multi-query retrieval
 * Elasticsearch/OpenSearch integration
+* Multi-query retrieval
 * Streaming responses
-* Agentic workflows
 * Citation support
-* Better query rewriting
-* Feedback loops for retrieval improvement
-
-⸻
-
-📸 UI Preview
-
-Add screenshots here
+* Agentic retrieval workflows
 
 ⸻
 
@@ -375,9 +181,8 @@ Add screenshots here
 Built using:
 
 * FAISS
-* Sentence Transformers
+* SentenceTransformers
 * Streamlit
 * OpenAI APIs
 * BM25
 * LangChain
-
